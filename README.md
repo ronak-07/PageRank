@@ -6,6 +6,11 @@ Google's page rank implementation on p2p file sharing database.
 To combat the problem of spider trap and dead ends we used another matrix. Via Teleportation these problems were resolved. Also since operating on rows seemed convenient, we made it row stochastic instead of column stochastic. Using Markov chain process, page ranks were calculated.
 To draw the graphs, we used dot (basic graph language) and matplotlib. Matplotlib doesn’t give arrowheads. To visualize with arrowheads as well, we used dot.
 
+Usage
+------
+        First run Gnutella_page_rank.py
+        Then run Graph.py
+
 General Description
 -------------------
 
@@ -52,7 +57,7 @@ Via this we prepare a dot file having a graph representation. This ensures that 
         3. Update the value in original_votes Matrix
 
 -	To solve the spider trap & Dead end problem.
--	
+	
         final= beta*original_votes + (1-beta)*teleported
         where beta= probability of opting for the link it originally pointed to
         1- beta= probability to opt for all opting any node
